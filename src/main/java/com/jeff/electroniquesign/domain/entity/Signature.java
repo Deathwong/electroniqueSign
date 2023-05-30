@@ -1,9 +1,12 @@
 package com.jeff.electroniquesign.domain.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import java.time.LocalDate;
+import java.time.Instant;
 
 @Entity(name = "Signature")
 @Table(name = "signature")
@@ -26,7 +29,7 @@ public class Signature {
     private String image;
 
     @Column(name = "sig_date_creation")
-    private LocalDate dateCreation;
+    private Instant dateCreation;
 
     @ManyToOne
     @JoinColumn(name = "signa_id")

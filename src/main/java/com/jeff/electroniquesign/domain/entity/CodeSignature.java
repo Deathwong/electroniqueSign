@@ -1,9 +1,12 @@
 package com.jeff.electroniquesign.domain.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import java.time.LocalDate;
+import java.time.Instant;
 
 @Entity(name = "CodeSignature")
 @Table(name = "code_signature")
@@ -23,7 +26,7 @@ public class CodeSignature {
     private Long code;
 
     @Column(name = "cos_date_expiration")
-    private LocalDate dateExpiration;
+    private Instant dateExpiration;
 
     @Column(name = "cos_statut")
     private String statut;

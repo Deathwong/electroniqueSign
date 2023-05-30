@@ -3,6 +3,7 @@ package com.jeff.electroniquesign.domain.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.Instant;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -24,7 +25,7 @@ public class DemandeSignature {
     private String statut;
 
     @Column(name = "des_date_demande")
-    private LocalDate dateDemande;
+    private Instant dateDemande;
 
     @Column(name = "des_date_expiration")
     private LocalDate dateExpiration;

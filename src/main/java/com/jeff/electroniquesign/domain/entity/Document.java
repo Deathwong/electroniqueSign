@@ -1,9 +1,12 @@
 package com.jeff.electroniquesign.domain.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import java.time.LocalDate;
+import java.time.Instant;
 
 @Entity(name = "Document")
 @Table(name = "document")
@@ -23,7 +26,7 @@ public class Document {
     private String nom;
 
     @Column(name = "doc_date_creation")
-    private LocalDate dateCreation;
+    private Instant dateCreation;
 
     @Column(name = "doc_statut")
     private String statut;
