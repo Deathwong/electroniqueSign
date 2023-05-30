@@ -7,23 +7,23 @@ import java.util.List;
 
 public record UtilisateurDto(
 
-        @NotBlank
+        @NotEmpty
         @Min(value = 3)
         @Max(value = 50)
         String nom,
 
-        @NotBlank
+        @NotEmpty
         @Min(value = 3)
         @Max(value = 50)
         String prenom,
 
-        @NotBlank
+        @NotEmpty
         @Email
         @Min(value = 5)
         @Max(value = 255)
         String email,
 
-        @NotBlank
+        @NotEmpty
         @Min(value = 5)
         @Max(value = 255)
         String motDePasse,

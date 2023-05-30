@@ -9,23 +9,23 @@ import java.util.List;
 
 public record SignataireDto(
 
-        @NotBlank
+        @NotEmpty
         @Min(value = 3)
         @Max(value = 50)
         String nom,
 
-        @NotBlank
+        @NotEmpty
         @Min(value = 3)
         @Max(value = 50)
         String prenom,
 
-        @NotBlank
+        @NotEmpty
         @Email
         @Min(value = 5)
         @Max(value = 255)
         String email,
 
-        @NotBlank
+        @NotEmpty
         @Max(value = 20)
         @Pattern(regexp = """
                 /\\b0[1-9](?:[-.\\s]?\\d{2}){4}\\b|\\b0[1-9](?:[-.\\s]?\\d{8})\\b|\\b0[1-9](?:[-.\\s]?\\d{1}[-.\\s]

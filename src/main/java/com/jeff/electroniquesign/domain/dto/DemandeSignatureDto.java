@@ -11,7 +11,7 @@ import java.util.List;
 
 public record DemandeSignatureDto(
 
-        @NotBlank
+        @NotEmpty
         @Size(max = 20, min = 5)
         String statut,
 
