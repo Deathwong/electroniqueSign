@@ -9,7 +9,6 @@ import java.time.LocalDate;
 @Table(name = "signature")
 @SequenceGenerator(name = "UtilisateurIdGenerator", sequenceName = "signature_seq", allocationSize = 1)
 @NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
 @EqualsAndHashCode

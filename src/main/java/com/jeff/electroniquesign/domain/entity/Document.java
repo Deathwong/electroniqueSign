@@ -9,7 +9,6 @@ import java.time.LocalDate;
 @Table(name = "document")
 @SequenceGenerator(name = "DocumentIdGenerator", sequenceName = "document_seq", allocationSize = 1)
 @NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
 @EqualsAndHashCode

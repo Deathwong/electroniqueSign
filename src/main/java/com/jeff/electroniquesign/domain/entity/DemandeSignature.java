@@ -10,7 +10,6 @@ import java.util.List;
 @Table(name = "demande_signature")
 @SequenceGenerator(name = "DemandesignatureIdGenerator", sequenceName = "demande_signature_seq", allocationSize = 1)
 @NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
 @EqualsAndHashCode

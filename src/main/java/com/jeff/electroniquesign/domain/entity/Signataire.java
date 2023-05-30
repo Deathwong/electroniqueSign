@@ -9,7 +9,6 @@ import java.util.List;
 @Table(name = "signataire")
 @SequenceGenerator(name = "SignataireIdGenerator", sequenceName = "signataire_seq", allocationSize = 1)
 @NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
 @EqualsAndHashCode
