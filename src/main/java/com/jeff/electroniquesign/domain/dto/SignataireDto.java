@@ -8,19 +8,23 @@ import jakarta.validation.constraints.*;
 import java.util.List;
 
 public record SignataireDto(
+
         @NotBlank
         @Min(value = 3)
         @Max(value = 50)
         String nom,
+
         @NotBlank
         @Min(value = 3)
         @Max(value = 50)
         String prenom,
+
         @NotBlank
         @Email
         @Min(value = 5)
         @Max(value = 255)
         String email,
+
         @NotBlank
         @Max(value = 20)
         @Pattern(regexp = """
@@ -28,10 +32,13 @@ public record SignataireDto(
                  ?\\d{2}){3}\\b
                  /gm""")
         String telephone,
+
         @NotNull
         List<Signature> signatures,
+
         @NotNull
         List<CodeSignature> codeSignatures,
+
         @NotNull
         List<DemandeSignature> DemandeSignatures
 ) {
