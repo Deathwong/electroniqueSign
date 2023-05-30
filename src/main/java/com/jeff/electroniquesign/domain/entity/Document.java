@@ -19,10 +19,6 @@ public class Document {
     @Column(name = "doc_id")
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "des_id")
-    private DemandeSignature demandesignature;
-
     @Column(name = "doc_nom")
     private String nom;
 
@@ -31,4 +27,8 @@ public class Document {
 
     @Column(name = "doc_statut")
     private String statut;
+
+    @ManyToOne
+    @JoinColumn(name = "des_id")
+    private DemandeSignature demandesignature;
 }

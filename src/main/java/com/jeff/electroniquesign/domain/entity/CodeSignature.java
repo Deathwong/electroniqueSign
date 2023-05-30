@@ -19,10 +19,6 @@ public class CodeSignature {
     @Column(name = "cos_id")
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "signa_id")
-    private Signataire signataire;
-
     @Column(name = "cos_code")
     private Long code;
 
@@ -31,4 +27,8 @@ public class CodeSignature {
 
     @Column(name = "cos_statut")
     private String statut;
+
+    @ManyToOne
+    @JoinColumn(name = "signa_id")
+    private Signataire signataire;
 }

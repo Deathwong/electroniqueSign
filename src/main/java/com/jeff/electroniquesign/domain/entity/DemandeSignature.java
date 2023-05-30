@@ -20,14 +20,6 @@ public class DemandeSignature {
     @Column(name = "des_id")
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "uti_id")
-    private Utilisateur utilisateur;
-
-    @ManyToOne
-    @JoinColumn(name = "signa_id")
-    private Signataire signataire;
-
     @Column(name = "des_statut")
     private String statut;
 
@@ -36,6 +28,14 @@ public class DemandeSignature {
 
     @Column(name = "des_date_expiration")
     private LocalDate dateExpiration;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "uti_id")
+    private Utilisateur utilisateur;
+
+    @ManyToOne
+    @JoinColumn(name = "signa_id")
+    private Signataire signataire;
 
     @OneToMany(mappedBy = "demandesignature")
     List<Document> documents;

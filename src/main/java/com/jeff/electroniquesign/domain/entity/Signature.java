@@ -7,7 +7,7 @@ import java.time.LocalDate;
 
 @Entity(name = "Signature")
 @Table(name = "signature")
-@SequenceGenerator(name = "UtilisateurIdGenerator", sequenceName = "signature_seq", allocationSize = 1)
+@SequenceGenerator(name = "SignatureIdGenerator", sequenceName = "signature_seq", allocationSize = 1)
 @NoArgsConstructor
 @Getter
 @Setter
@@ -15,13 +15,9 @@ import java.time.LocalDate;
 public class Signature {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "UtilisateurIdGenerator")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SignatureIdGenerator")
     @Column(name = "sig_id")
     private Long id;
-
-    @ManyToOne
-    @JoinColumn(name = "signa_id")
-    private Signataire signataire;
 
     @Column(name = "sig_libelle")
     private String libelle;
@@ -31,4 +27,8 @@ public class Signature {
 
     @Column(name = "sig_date_creation")
     private LocalDate dateCreation;
+
+    @ManyToOne
+    @JoinColumn(name = "signa_id")
+    private Signataire signataire;
 }
