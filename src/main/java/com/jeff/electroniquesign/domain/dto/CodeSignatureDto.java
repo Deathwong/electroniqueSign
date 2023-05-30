@@ -8,6 +8,16 @@ import jakarta.validation.constraints.Size;
 
 import java.time.Instant;
 
-public record CodeSignatureDto(Long id, @NotNull Long code, @NotNull @FutureOrPresent Instant dateExpiration, @NotBlank
-@Size(max = 20, min = 5) String statut, @NotNull Signataire signataire) {
+public record CodeSignatureDto(
+        @NotNull
+        Long code,
+        @NotNull
+        @FutureOrPresent
+        Instant dateExpiration,
+        @NotBlank
+        @Size(max = 20, min = 5)
+        String statut,
+        @NotNull
+        Signataire signataire
+) {
 }

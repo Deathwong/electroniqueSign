@@ -8,6 +8,16 @@ import jakarta.validation.constraints.PastOrPresent;
 
 import java.time.Instant;
 
-public record SignatureDto(Long id, @NotBlank @Max(value = 100) String libelle, @NotBlank String image,
-                           @NotNull @PastOrPresent Instant dateCreation, @NotNull Signataire signataire) {
+public record SignatureDto(
+        @NotBlank
+        @Max(value = 100)
+        String libelle,
+        @NotBlank
+        String image,
+        @NotNull
+        @PastOrPresent
+        Instant dateCreation,
+        @NotNull
+        Signataire signataire
+) {
 }

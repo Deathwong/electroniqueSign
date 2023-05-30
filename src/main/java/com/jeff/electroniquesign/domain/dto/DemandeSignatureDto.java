@@ -9,9 +9,21 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.util.List;
 
-public record DemandeSignatureDto(Long id, @NotBlank @Size(max = 20, min = 5) String statut,
-                                  @NotNull @PastOrPresent Instant dateDemande, @NotNull
-                                  @FutureOrPresent LocalDate dateExpiration,
-                                  @NotNull Utilisateur utilisateur, @NotNull Signataire signataire,
-                                  @NotNull List<Document> documents) {
+public record DemandeSignatureDto(
+        @NotBlank
+        @Size(max = 20, min = 5)
+        String statut,
+        @NotNull
+        @PastOrPresent
+        Instant dateDemande,
+        @NotNull
+        @FutureOrPresent
+        LocalDate dateExpiration,
+        @NotNull
+        Utilisateur utilisateur,
+        @NotNull
+        Signataire signataire,
+        @NotNull
+        List<Document> documents
+) {
 }
