@@ -30,5 +30,5 @@ public class Document {
 
     @ManyToOne
     @JoinColumn(name = "des_id")
-    private DemandeSignature demandesignature;
+    private DemandeSignature DemandeSignature;
 }

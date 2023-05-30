@@ -38,5 +38,5 @@ public class Signataire {
     List<CodeSignature> codeSignatures;
 
     @OneToMany(mappedBy = "signataire")
-    List<DemandeSignature> demandeSignatures;
+    List<DemandeSignature> DemandeSignatures;
 }

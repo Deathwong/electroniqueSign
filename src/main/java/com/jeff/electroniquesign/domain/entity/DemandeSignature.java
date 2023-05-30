@@ -6,9 +6,9 @@ import lombok.*;
 import java.time.LocalDate;
 import java.util.List;
 
-@Entity(name = "Demandesignature")
+@Entity(name = "DemandeSignature")
 @Table(name = "demande_signature")
-@SequenceGenerator(name = "DemandesignatureIdGenerator", sequenceName = "demande_signature_seq", allocationSize = 1)
+@SequenceGenerator(name = "DemandeSignatureIdGenerator", sequenceName = "demande_signature_seq", allocationSize = 1)
 @NoArgsConstructor
 @Getter
 @Setter
@@ -16,7 +16,7 @@ import java.util.List;
 public class DemandeSignature {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "DemandesignatureIdGenerator")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "DemandeSignatureIdGenerator")
     @Column(name = "des_id")
     private Long id;
 
@@ -37,6 +37,6 @@ public class DemandeSignature {
     @JoinColumn(name = "signa_id")
     private Signataire signataire;
 
-    @OneToMany(mappedBy = "demandesignature")
+    @OneToMany(mappedBy = "DemandeSignature")
     List<Document> documents;
 }
