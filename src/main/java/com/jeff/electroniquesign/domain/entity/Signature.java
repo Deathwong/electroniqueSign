@@ -6,7 +6,7 @@ import lombok.*;
 import java.time.LocalDate;
 
 @Entity(name = "Signature")
-@Table(name = "signature", schema = "public")
+@Table(name = "signature")
 @SequenceGenerator(name = "UtilisateurIdGenerator", sequenceName = "signature_seq", allocationSize = 1)
 @NoArgsConstructor
 @AllArgsConstructor

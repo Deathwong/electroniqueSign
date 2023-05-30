@@ -6,7 +6,7 @@ import lombok.*;
 import java.util.List;
 
 @Entity(name = "Signataire")
-@Table(name = "signataire", schema = "public")
+@Table(name = "signataire")
 @SequenceGenerator(name = "SignataireIdGenerator", sequenceName = "signataire_seq", allocationSize = 1)
 @NoArgsConstructor
 @AllArgsConstructor

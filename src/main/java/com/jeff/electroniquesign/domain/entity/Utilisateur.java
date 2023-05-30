@@ -9,7 +9,7 @@ import lombok.Setter;
 import java.util.List;
 
 @Entity(name = "Utilisateur")
-@Table(name = "utilisateur", schema = "public")
+@Table(name = "utilisateur")
 @SequenceGenerator(name = "UtilisateurIdGenerator", sequenceName = "utilisateur_seq", allocationSize = 1)
 @NoArgsConstructor
 @Getter

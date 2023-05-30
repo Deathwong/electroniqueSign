@@ -6,7 +6,7 @@ import lombok.*;
 import java.time.LocalDate;
 
 @Entity(name = "Document")
-@Table(name = "document", schema = "public")
+@Table(name = "document")
 @SequenceGenerator(name = "DocumentIdGenerator", sequenceName = "document_seq", allocationSize = 1)
 @NoArgsConstructor
 @AllArgsConstructor

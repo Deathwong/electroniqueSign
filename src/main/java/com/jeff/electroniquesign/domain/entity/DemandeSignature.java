@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Entity(name = "Demandesignature")
-@Table(name = "demande_signature", schema = "public")
+@Table(name = "demande_signature")
 @SequenceGenerator(name = "DemandesignatureIdGenerator", sequenceName = "demande_signature_seq", allocationSize = 1)
 @NoArgsConstructor
 @AllArgsConstructor
