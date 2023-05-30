@@ -1,8 +1,13 @@
 package com.jeff.electroniquesign.domain.dto;
 
 import com.jeff.electroniquesign.domain.entity.Signataire;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.PastOrPresent;
 
 import java.time.Instant;
 
-public record SignatureDto(Long id, String libelle, String image, Instant dateCreation, Signataire signataire) {
+public record SignatureDto(Long id, @NotBlank @Max(value = 100) String libelle, @NotBlank String image,
+                           @NotNull @PastOrPresent Instant dateCreation, @NotNull Signataire signataire) {
 }

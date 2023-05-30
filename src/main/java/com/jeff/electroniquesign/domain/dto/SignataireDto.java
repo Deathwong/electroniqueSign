@@ -3,10 +3,19 @@ package com.jeff.electroniquesign.domain.dto;
 import com.jeff.electroniquesign.domain.entity.CodeSignature;
 import com.jeff.electroniquesign.domain.entity.DemandeSignature;
 import com.jeff.electroniquesign.domain.entity.Signature;
+import jakarta.validation.constraints.*;
 
 import java.util.List;
 
-public record SignataireDto(Long id, String nom, String prenom, String email, String telephone,
-                            List<Signature> signatures, List<CodeSignature> codeSignatures,
-                            List<DemandeSignature> DemandeSignatures) {
+public record SignataireDto(Long id, @NotBlank @Min(value = 3) @Max(value = 50) String nom,
+                            @NotBlank @Min(value = 3) @Max(value = 50) String prenom,
+                            @NotBlank @Email @Min(value = 5) @Max(value = 255) String email,
+                            @NotBlank @Max(value = 20) @Pattern(regexp = """
+                                    /\\b0[1-9](?:[-.\\s]?\\d{2}){4}\\b|\\b0[1-9]
+                                    (?:[-.\\s]?\\d{8})\\b|\\b0[1-9](?:[-.\\s]?\\d{1}[-.\\s]
+                                    ?\\d{2}){3}\\b
+                                    /gm""") String telephone,
+                            @NotNull List<Signature> signatures,
+                            @NotNull List<CodeSignature> codeSignatures,
+                            @NotNull List<DemandeSignature> DemandeSignatures) {
 }
