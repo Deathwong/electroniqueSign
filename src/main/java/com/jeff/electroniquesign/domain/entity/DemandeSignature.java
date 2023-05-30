@@ -1,7 +1,10 @@
 package com.jeff.electroniquesign.domain.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.Instant;
 import java.time.LocalDate;
@@ -38,6 +41,6 @@ public class DemandeSignature {
     @JoinColumn(name = "signa_id")
     private Signataire signataire;
 
-    @OneToMany(mappedBy = "DemandeSignature")
+    @OneToMany(mappedBy = "demandeSignature")
     List<Document> documents;
 }
