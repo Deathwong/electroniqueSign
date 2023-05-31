@@ -29,10 +29,8 @@ public record SignataireDto(
 
         List<@NotNull Signature> signatures,
 
-        @NotNull
-        List<CodeSignature> codeSignatures,
+        List<@NotNull CodeSignature> codeSignatures,
 
-        @NotNull
-        List<DemandeSignature> DemandeSignatures
+        List<@NotNull DemandeSignature> DemandeSignatures
 ) {
 }
