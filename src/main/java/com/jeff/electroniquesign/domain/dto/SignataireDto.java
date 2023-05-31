@@ -10,23 +10,20 @@ import java.util.List;
 public record SignataireDto(
 
         @NotEmpty
-        @Min(value = 3)
-        @Max(value = 50)
+        @Size(max = 50, min = 3)
         String nom,
 
         @NotEmpty
-        @Min(value = 3)
-        @Max(value = 50)
+        @Size(max = 50, min = 3)
         String prenom,
 
         @NotEmpty
         @Email
-        @Min(value = 5)
-        @Max(value = 255)
+        @Size(max = 255, min = 5)
         String email,
 
         @NotEmpty
-        @Max(value = 20)
+        @Size(max = 20)
         @Pattern(regexp = "\\b(?:\\+?\\d{1,3}[-.\\s]?)?(?:\\(?)0[67]\\s\\d{2}\\s\\d{2}\\s\\d{2}\\s\\d{2}\\b")
         String telephone,
 
