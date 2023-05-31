@@ -27,14 +27,10 @@ public record SignataireDto(
 
         @NotEmpty
         @Max(value = 20)
-        @Pattern(regexp = """
-                /\\b0[1-9](?:[-.\\s]?\\d{2}){4}\\b|\\b0[1-9](?:[-.\\s]?\\d{8})\\b|\\b0[1-9](?:[-.\\s]?\\d{1}[-.\\s]
-                 ?\\d{2}){3}\\b
-                 /gm""")
+        @Pattern(regexp = "\\b(?:\\+?\\d{1,3}[-.\\s]?)?(?:\\(?)0[67]\\s\\d{2}\\s\\d{2}\\s\\d{2}\\s\\d{2}\\b")
         String telephone,
 
-        @NotNull
-        List<Signature> signatures,
+        List<@NotNull Signature> signatures,
 
         @NotNull
         List<CodeSignature> codeSignatures,
