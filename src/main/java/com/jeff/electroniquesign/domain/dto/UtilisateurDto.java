@@ -1,6 +1,5 @@
 package com.jeff.electroniquesign.domain.dto;
 
-import com.jeff.electroniquesign.domain.entity.DemandeSignature;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -27,6 +26,6 @@ public record UtilisateurDto(
         @Size(max = 255, min = 5)
         String motDePasse,
 
-        List<@NotNull DemandeSignature> DemandeSignatures
+        List<@NotNull DemandeSignatureDto> DemandeSignatures
 ) {
 }

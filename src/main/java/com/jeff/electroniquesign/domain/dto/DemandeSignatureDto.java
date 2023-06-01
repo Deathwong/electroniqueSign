@@ -1,8 +1,5 @@
 package com.jeff.electroniquesign.domain.dto;
 
-import com.jeff.electroniquesign.domain.entity.Document;
-import com.jeff.electroniquesign.domain.entity.Signataire;
-import com.jeff.electroniquesign.domain.entity.Utilisateur;
 import jakarta.validation.constraints.*;
 
 import java.time.Instant;
@@ -24,11 +21,11 @@ public record DemandeSignatureDto(
         LocalDate dateExpiration,
 
         @NotNull
-        Utilisateur utilisateur,
+        UtilisateurDto utilisateur,
 
         @NotNull
-        Signataire signataire,
-        
-        List<@NotNull Document> documents
+        SignataireDto signataire,
+
+        List<@NotNull DocumentDto> documents
 ) {
 }

@@ -1,6 +1,5 @@
 package com.jeff.electroniquesign.domain.dto;
 
-import com.jeff.electroniquesign.domain.entity.Signataire;
 import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -22,6 +21,6 @@ public record CodeSignatureDto(
         String statut,
 
         @NotNull
-        Signataire signataire
+        SignataireDto signataire
 ) {
 }
