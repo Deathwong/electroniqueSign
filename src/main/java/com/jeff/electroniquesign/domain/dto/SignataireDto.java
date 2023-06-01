@@ -1,6 +1,10 @@
 package com.jeff.electroniquesign.domain.dto;
 
-import jakarta.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 
 import java.util.List;
 
@@ -24,10 +28,10 @@ public record SignataireDto(
         @Pattern(regexp = "\\b(?:\\+?\\d{1,3}[-.\\s]?)?(?:\\(?)0[67]\\s\\d{2}\\s\\d{2}\\s\\d{2}\\s\\d{2}\\b")
         String telephone,
 
-        List<@NotNull SignatureDto> signatures,
+        List<@Valid SignatureDto> signatures,
 
-        List<@NotNull CodeSignatureDto> codeSignatures,
-        
-        List<@NotNull DemandeSignatureDto> DemandeSignatures
+        List<@Valid CodeSignatureDto> codeSignatures,
+
+        List<@Valid DemandeSignatureDto> DemandeSignatures
 ) {
 }

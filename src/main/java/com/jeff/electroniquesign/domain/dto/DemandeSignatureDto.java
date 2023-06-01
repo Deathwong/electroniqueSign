@@ -1,5 +1,6 @@
 package com.jeff.electroniquesign.domain.dto;
 
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
 
 import java.time.Instant;
@@ -25,7 +26,7 @@ public record DemandeSignatureDto(
 
         @NotNull
         SignataireDto signataire,
-        
-        List<@NotNull DocumentDto> documents
+
+        List<@Valid DocumentDto> documents
 ) {
 }
