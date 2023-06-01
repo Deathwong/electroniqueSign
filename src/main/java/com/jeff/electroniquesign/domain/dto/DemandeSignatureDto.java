@@ -25,7 +25,7 @@ public record DemandeSignatureDto(
 
         @NotNull
         SignataireDto signataire,
-
+        
         List<@NotNull DocumentDto> documents
 ) {
 }

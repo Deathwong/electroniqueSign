@@ -26,6 +26,7 @@ public record UtilisateurDto(
         @Size(max = 255, min = 5)
         String motDePasse,
 
+        @NotNull
         List<@NotNull DemandeSignatureDto> DemandeSignatures
 ) {
 }
