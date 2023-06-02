@@ -1,5 +1,6 @@
 package com.jeff.electroniquesign.domain.dto;
 
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;
@@ -22,6 +23,7 @@ public record DocumentDto(
         String statut,
 
         @NotNull
+        @Valid
         DemandeSignatureDto demandeSignature
 ) {
 }

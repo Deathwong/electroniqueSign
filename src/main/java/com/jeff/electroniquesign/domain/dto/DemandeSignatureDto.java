@@ -25,6 +25,7 @@ public record DemandeSignatureDto(
         UtilisateurDto utilisateur,
 
         @NotNull
+        @Valid
         SignataireDto signataire,
 
         List<@Valid DocumentDto> documents
