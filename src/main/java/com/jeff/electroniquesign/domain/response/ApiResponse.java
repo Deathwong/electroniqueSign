@@ -7,11 +7,11 @@ import org.springframework.http.HttpStatus;
 import java.time.Instant;
 
 @Getter
-public class ResponseApi extends AbstractResponse {
+public class ApiResponse extends AbstractResponse {
 
     private Object data;
 
-    public ResponseApi(Object data) {
+    public ApiResponse(Object data) {
         super(HttpStatus.OK.value(), Instant.now(), Constant.OK_MESSAGE);
         this.data = data;
     }
