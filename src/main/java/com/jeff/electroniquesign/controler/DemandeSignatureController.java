@@ -1,15 +1,18 @@
 package com.jeff.electroniquesign.controler;
 
-import org.springframework.web.bind.annotation.GetMapping;
+import com.jeff.electroniquesign.domain.response.ResponseApi;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/demandesignature")
+@RequestMapping("/demandeSignature")
 public class DemandeSignatureController {
 
-    @GetMapping
-    String creerDemandeSignature() {
-        return "Hello Stephan";
+    @PostMapping
+    ResponseEntity<ResponseApi> creerDemandeSignature() {
+        String helloStephan = "Hello Stephan, How are you ?";
+        return ResponseEntity.ok().body(new ResponseApi(helloStephan));
     }
 }
