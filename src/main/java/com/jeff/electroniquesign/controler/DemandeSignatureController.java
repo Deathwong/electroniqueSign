@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/electroniquesign")
+@RequestMapping("/demandesignature")
 public class DemandeSignatureController {
 
-    @GetMapping("/demandesignature")
-    String consulterDemandeSignature() {
+    @GetMapping
+    String creerDemandeSignature() {
         return "Hello Stephan";
     }
 }
